@@ -68,30 +68,20 @@ class AddTodo extends React.Component {
     }
 }
 
-class TodoList extends React.Component {
-    render() { 
-        return (
-        <ul>{this.props.todos.map(todo => <Todo key={todo.id} todo={todo} handleRemoveTodo={this.props.handleRemoveTodo}/>)}</ul>
-        );
-    }
-}
+const TodoList = (props) => (
+    <ul>{props.todos.map(todo => <Todo key={todo.id} todo={todo} handleRemoveTodo={props.handleRemoveTodo}/>)}</ul>
+);
 
-class Todo extends React.Component {
-    render() { 
-        return (
-            <React.Fragment>
-                <li>
-                    {this.props.todo.value}
-                    <button onClick={this.props.handleRemoveTodo.bind(null, this.props.todo.id)}>Remove</button>
-                </li>
-            </React.Fragment>
-        );
-    }
-}
+const Todo = (props) => (
+        <React.Fragment>
+            <li>
+                {props.todo.value}
+                <button onClick={props.handleRemoveTodo.bind(null, props.todo.id)}>Remove</button>
+            </li>
+        </React.Fragment>
+);
 
-class Title extends React.Component {
-    render() { return <h1>Todo App</h1>}
-}
+const Title = (props) => <h1>Todo App</h1>
 
 const appRoot = document.getElementById('app');
 
