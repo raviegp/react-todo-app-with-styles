@@ -22,10 +22,12 @@ class AddTodo extends React.Component {
     render() { 
        return (
            <React.Fragment>
-               <form onSubmit={this.handleAddTodo}>
-                    <input type="text" onChange={this.handleOnChange} value={this.state.value}></input>
-                    <button>Add</button>
-               </form>
+               <div>
+                <form className="add-todo" onSubmit={this.handleAddTodo}>
+                        <input type="text" placeholder="Enter an item..." onChange={this.handleOnChange} value={this.state.value}></input>
+                        <button className="add-todo__button">Add Item</button>
+                </form>
+               </div>
            </React.Fragment>
        ); 
     }

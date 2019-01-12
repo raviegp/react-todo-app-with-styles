@@ -1,0 +1,14 @@
+.add-todo {
+    margin-top: 2rem;
+    display: flex;
+    min-width: 100%;
+    background: black;
+}
+
+.add-todo__button {
+    background: purple;
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 1rem;
+}

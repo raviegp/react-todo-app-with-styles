@@ -1,5 +1,9 @@
 import React from 'react';
 
-const Title = () => <h1>Todo App</h1>
+const Title = () => (
+    <div className="title">
+        <h1 className="title__app-name">Todo App</h1>
+    </div>
+);
 
 export default Title;
